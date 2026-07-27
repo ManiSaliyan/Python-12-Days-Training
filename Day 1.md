@@ -6,7 +6,7 @@
 
 
 ## 3 Reverse a number 
-~~~
+```python
 n = int (input())
 rev = 0
 while(n!=0):
@@ -14,11 +14,11 @@ while(n!=0):
     rev = (rev*10) + rem
     n = n//10
 print(rev)
-~~~python
+```
 
 
 ## 4 Prime Number
-~~~
+```python
 def isPrime(n):
     flag = True
     for i in range(2,n):
@@ -39,11 +39,11 @@ for i in range(sr,er+1):
 for i in lis:
     print(i)
 
-~~~python
+```
 
 
 ## 5 Palindrome
-~~~
+```python
 def isPalindrome(n):
     tempn=n
     rev = 0
@@ -57,4 +57,4 @@ def isPalindrome(n):
         print("Not Palindrome")
 n = int(input("Enter a Number: "))
 isPalindrome(n)
-~~~java
+```
