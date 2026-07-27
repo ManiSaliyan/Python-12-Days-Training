@@ -58,3 +58,30 @@ def isPalindrome(n):
 n = int(input("Enter a Number: "))
 isPalindrome(n)
 ```
+
+## 5 Strong Number
+ - a no is said to be strong number if its each digits factorial sum is equal to the number itself
+ -  145
+ -  1! + 4! + 5! = 145
+ -  1 + 24 + 120 = 145
+ -  hence 145 is a strong number
+```python
+def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n-1)
+
+def isStrong(n):
+    tempn=n
+    strong = 0
+    while(tempn!=0):
+        rem = tempn%10
+        strong += fact(rem)
+        tempn = tempn//10
+    if n==strong:
+        print("Strong Number")
+    else:
+        print("Not Strong Number")
+n = int(input("Enter a Number: "))
+isStrong(n)
+```
