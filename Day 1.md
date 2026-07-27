@@ -85,3 +85,25 @@ def isStrong(n):
 n = int(input("Enter a Number: "))
 isStrong(n)
 ```
+
+
+## 6 Perfect Number
+ - a no is said to be strong number if its sum of its positive proper divisors, excluding the number itself
+ - 6 divisors  1,2,3
+ - 1+2+3 = 6
+ - where as 12 divisors 1,2,3,4,6
+ - 1+2+3+4+6 = 16  it is not the same no hence it is not a perfect number
+```python
+def isPerfect(n):
+    sum = 0
+    for i in range(1,n):
+        if(n%i==0):
+            sum+=i
+    if sum==n:
+        print("Perfect Number")
+    else:
+        print("Not aPerfect Number")
+        
+n = int(input("Enter a Number: "))
+isPerfect(n)
+```
