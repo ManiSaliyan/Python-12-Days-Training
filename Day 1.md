@@ -39,4 +39,22 @@ for i in range(sr,er+1):
 for i in lis:
     print(i)
 
+~~~python
+
+
+## 5 Palindrome
+~~~
+def isPalindrome(n):
+    tempn=n
+    rev = 0
+    while(tempn!=0):
+        rem = tempn%10
+        rev = (rev*10) + rem
+        tempn = tempn//10
+    if n==rev:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+n = int(input("Enter a Number: "))
+isPalindrome(n)
 ~~~java
