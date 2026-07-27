@@ -107,3 +107,27 @@ def isPerfect(n):
 n = int(input("Enter a Number: "))
 isPerfect(n)
 ```
+
+## 7 Happy Number
+
+```python
+def isHappy(n):
+    seen = set()
+    tempn = n
+    val = 0
+    x=0
+    while(x<10):
+        while(tempn!=0):
+            rem = tempn%10
+            val += rem**2
+            tempn = tempn//10
+        tempn=val
+        val=0
+        x+=1
+    if tempn==1:
+        print("Happy")
+    else:
+        print("Not happy")
+
+isHappy(94)
+```
