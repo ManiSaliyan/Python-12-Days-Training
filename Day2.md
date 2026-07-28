@@ -190,10 +190,53 @@ print("Enter the elements: ")
 list1 = list(map(int,input().split()))
 uniqueCount(list1)
 ```
+# String
+ - string.capitalize()   to capitalize first letter
+ - string.casefold()  convert Uppercase to Lowercase
+ - string.upper()  to capitalize all word
+ - string.lower()  to lowercase all letters
+ - string.center(space_value_in_int)    the value will be half and the amount of space added at both sides
+ - string.count("letter")   return count of a letter in a string
+ - string.endswith("word or letter")  returns True or False
+ - string.expandtabs()   if string stored as "A\tB"  o/p=>  A     B
+ - string.find("letter or word")   return index of first occurence
+ - str="hi {}".format("Mani")    o/p=>   hi Mani
+ - string.isalnum()   Return True if string contain only letter and number not if contains special characters
+ - string.isdecimal()   
+ - string.isdigit()
+ - string.islower()
+ - string.isnumeric()
+ - string.isupper()
+ - string.isspace()   to check whether a string is space
+
+ - Join Method
+ - " ".join(list)
+ - 
+```python
+string.capitalize()
+string.casefold()
+string.upper()
+string.lower()
+string.center(space_value_in_int)
+string.count("letter")
+string.endswith("word or letter")
+string.expandtabs()
+string.find("letter or word")
+str="hi {}".format("Mani")
+string.isalnum()
+string.isdecimal()
+string.isdigit()
+string.islower()
+string.isnumeric(
+string.isupper()
+string.isspace()
+ord("letter")   gives ASCII number
+```
 ## 
 ```python
 
 ```
+
 
 
 
