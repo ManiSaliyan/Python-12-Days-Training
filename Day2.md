@@ -250,7 +250,7 @@ for i in strs:
 print("Length of String is: ",count)
 ```
 
-## 
+## Convert all lowercase to uppercase in a string and viceversa
 ```python
 strs = input("Enter a String: ")
 str2 = str()
@@ -319,10 +319,42 @@ for i in str1:
         str2 = str2+i
 print(str2)
 ```
+## Remove all the Space in a given String
+```python
+str1 = input("Enter a String: ")
+str2= str()
+for i in str1:
+    if i!=" ":
+        str2 = str2+i
+print(str2)
+```
 ## 
 ```python
+def freqChar(stri,char):
+    count=0
+    for i in stri:
+        if i == char:
+            count+=1
+    return count
+str1 = input("Enter a String: ")
+visited = []
+for i in str1:
+    if i not in visited:
+        visited.append(i)
+        print(i," : ",freqChar(str1,i))
+```
+## Anagram problem  eat,ate,tea  just character reframed 
+```python
+
+str1 = sorted(input("Enter First String: ").lower())
+str2 = sorted(input("Enter Second String: ").lower())
+if str1==str2:
+    print("Anagram")
+else:
+    print("Not Anagram")
 
 ```
+
 
 
 
