@@ -111,10 +111,28 @@ for i in range(len(list1)):
             list1[i],list1[j] = list1[j],list1[i]
 print("Sort array using Custom function: ",list1)
 ```
+## Sort first half Ascending next half Descending
+```python
+print("Enter the elements: ")
+list1 = list(map(int,input().split()))
+mid = len(list1)//2
+for i in range(mid):
+    for j in range(i+1,mid):
+        if (list1[i]>list1[j]):
+            list1[i],list1[j] = list1[j],list1[i]
+for i in range(mid,len(list1)):
+    for j in range(i+1,len(list1)):
+        if (list1[i]<list1[j]):
+            list1[i],list1[j] = list1[j],list1[i]
+print("Sort array using Custom function: ",list1)
+```
 ## 
 ```python
 
 ```
+
+
+
 
 
 
