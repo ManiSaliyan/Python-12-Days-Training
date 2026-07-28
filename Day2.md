@@ -232,13 +232,97 @@ string.isupper()
 string.isspace()
 ord("letter")   gives ASCII number
 ```
+## Check String is alphabet without Built in Function
+```python
+strs = input("Enter a String: ")
+count=0
+for i in strs:
+    count+=1
+print("Length of String is: ",count)
+```
+
+## Length of String without Built in Function
+```python
+strs = input("Enter a String: ")
+count=0
+for i in strs:
+    count+=1
+print("Length of String is: ",count)
+```
+
+## 
+```python
+strs = input("Enter a String: ")
+str2 = str()
+for i in strs:
+    if i.isupper():
+        i = i.lower()
+        str2 = str2+i
+    else:
+        i = i.upper()
+        str2 = str2+i
+print(str2)
+```
+
+## Count no of vovels
+```python
+strs = input("Enter a String: ")
+cv = 0
+cc = 0
+for i in strs:
+    i = i.lower()
+    if i=="a" or i=="e" or i=="i" or i=="o" or i=="u":
+        cv+=1
+    elif ord(i)>=65 and ord(i)<=122:
+        cc+=1
+    else:
+        continue
+print("Vowel Count: ",cv)
+print("Consonants Count: ",cc)
+```
+## Remove vowels in a string
+```python
+strs = input("Enter a String: ")
+str2 = str()
+vovels = ["a","e","i","o","u","A","E","I","O","U"]
+for i in strs:
+    if i in vovels:
+        continue
+    else:
+        str2 = str2+i
+print(str2)
+```
+## Reverse a String and check whether it is Palindrome
+```python
+str1 = input("Enter a String: ")
+str2= str()
+length = 0
+for i in str1:
+    length+=1
+for i in range(length-1,-1,-1):
+    str2 = str2+str1[i]
+if str1==str2:
+    print("Palinrome")
+else:
+    print("Not Palinrome")
+
+```
+## Remove all digits in a string
+```python
+str1 = input("Enter a String: ")
+str2= str()
+length = 0
+for i in str1:
+    if i.isdigit():
+        continue
+    else:
+        str2 = str2+i
+print(str2)
+```
 ## 
 ```python
 
 ```
-
-
-
 
 
 
