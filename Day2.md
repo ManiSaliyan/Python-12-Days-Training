@@ -174,10 +174,28 @@ list1 = list(map(int,input().split()))
 count(list1)
 ```
 
+## Count of unique elements in an Array
+```python
+def uniqueCount(list1):
+    length = len(list1)
+    count=0
+    visited = []
+    for i in range(length):
+        if list1[i] in visited:
+            continue
+        visited.append(list1[i])
+        count+=1
+    print("Total no of unique elements",len(visited))
+print("Enter the elements: ")
+list1 = list(map(int,input().split()))
+uniqueCount(list1)
+```
 ## 
 ```python
 
 ```
+
+
 
 
 
