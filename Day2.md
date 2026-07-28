@@ -126,11 +126,58 @@ for i in range(mid,len(list1)):
             list1[i],list1[j] = list1[j],list1[i]
 print("Sort array using Custom function: ",list1)
 ```
+## Count of Each element
+```python
+print("Enter the elements: ")
+list1 = list(map(int,input().split()))
+length = len(list1)
+visited=[]
+# print("sort array using Built in function: ",sorted(list1))
+print("\nCount of Each elements: ")
+for i in range(length):
+    if list1[i] in visited:
+        continue
+    visited.append(list1[i])
+    count=0
+    for j in range(length):
+        if list1[i] == list1[j]:
+            count+=1
+    print(list1[i]," : ",count)
+        
+```
+ - To print count in an Descending order
+```python
+def count(list1):
+    length = len(list1)
+    visited=[]
+    freq=[]
+    print("\nCount of Each elements: ")
+    for i in range(length):
+        if list1[i] in visited:
+            continue
+        visited.append(list1[i])
+        count=0
+        for j in range(length):
+            if list1[i] == list1[j]:
+                count+=1
+        freq.append(count)
+    for i in range(len(visited)):
+        for j in range(i+1,len(visited)):
+            if (freq[i]<freq[j]):
+                freq[i],freq[j] = freq[j],freq[i]
+                visited[i],visited[j] = visited[j],visited[i]
+    for i in range(len(visited)):
+        print(visited[i]," : ",freq[i])
+
+print("Enter the elements: ")
+list1 = list(map(int,input().split()))
+count(list1)
+```
+
 ## 
 ```python
 
 ```
-
 
 
 
