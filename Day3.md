@@ -37,3 +37,24 @@ for i in range(m):
             print(count,end=" ")
     print()
 ```
+
+1 * * *  <br>
+1 2 * *  <br>
+1 2 3 *  <br>
+1 2 3 4  <br>
+
+- the diffrence is Re-initialising Count
+```python
+m=int(input("Enter Row: "))
+n=int(input("Enter Column: "))
+count=0
+for i in range(m):
+    for j in range(n):
+        if i<j:
+            print("*", end=" ")
+        else:
+            count+=1
+            print(count,end=" ")
+    count=0
+    print()
+```
