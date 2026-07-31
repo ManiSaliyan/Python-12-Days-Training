@@ -66,7 +66,52 @@ stack.traverse()
 stack.pop()
 stack.traverse()
 ```
+## Queue
+```python
+class Queue:
+    def __init__(self,k):
+        self.k = k
+        self.queue = [None]*k
+        self.front=self.rear=-1
+    def enqueue(self,data):
+        if self.front==self.k-1:
+            print("Queue is Full")
+            return
+        elif self.front ==-1:
+            self.front=self.rear=0
+            self.queue[self.rear] = data
+        else:
+            self.rear+=1
+            self.queue[self.rear] = data
+        print(f"Inserted {self.queue[self.rear]}")
+    def dequeue(self):
+        if self.rear==-1:
+            print("Empty List")
+        elif self.front==self.rear:
+            temp=self.queue[self.front]
+            self.front+=1
+            print(f"Deleted {temp}")
+        else:
+            temp=self.queue[self.front]
+            self.front+=1
+            print(f"Deleted {temp}")
+    def traverse(self):
+        if self.rear==-1:
+            print("Empty List")
+        else:
+            for i in range(self.front,self.rear+1):
+                print(self.queue[i])
 
+queue = Queue(4)
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+queue.enqueue(4)
+queue.traverse()
+queue.dequeue()
+queue.traverse()
+        
+```
 
 
 
