@@ -112,8 +112,49 @@ queue.dequeue()
 queue.traverse()
         
 ```
-##
+## Queue Using Linked List
 ```python
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+class Queue:
+    def __init__(self):
+        self.front=self.rear=None
+    def enqueue(self,data):
+        nn = Node(data)
+        if self.front == self.rear == None:
+            self.front=self.rear=nn
+        else:
+            self.rear.next = nn
+            self.rear=nn
+        print(f"Inserted {nn.data}")
+    def dequeue(self):
+        if self.front == self.rear == None:
+            print("Empty Queue")
+        else:
+            temp = self.front
+            self.front=self.front.next
+            print(f"Deleted {temp.data}")
+    def display(self):
+        if self.front == self.rear == None:
+            print("Empty Queue")
+        else:
+            cur = self.front
+            while cur:
+                print(cur.data,end="->")
+                cur= cur.next
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.enqueue(4)
+q.display()
+q.dequeue()
+q.display()
+
 
 ```
 
