@@ -147,7 +147,7 @@ else:
 def bubble(lis):
     length = len(arr)
     for i in range(length):
-        for j in range(i+1,length):
+        for j in range(i+1,length):  # for j in range(0, length - i - 1):
             if arr[i]>arr[j]:
                 arr[i],arr[j]=arr[j],arr[i]
     return lis
