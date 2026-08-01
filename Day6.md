@@ -173,9 +173,22 @@ arr = [1,3,6,2,5]
 print(selection(arr))
 ```
 
-##
+## Selection Sort
 ```python
+arr= [1,4,5,3,2]
 
+def selectionSort(lis):
+    length = len(arr)
+    for i in range(length):
+        mini=i
+        for j in range(i+1,length):
+            if arr[j]<arr[mini]:
+                mini=j
+        arr[i],arr[mini] = arr[mini],arr[i]
+    return lis
+
+arr = [1,3,6,2,5]
+print(selectionSort(arr))
 ```
 
 ##
