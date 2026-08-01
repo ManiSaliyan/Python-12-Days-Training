@@ -157,9 +157,20 @@ print(bubble(arr))
 
 ```
 
-## 
+## Insertion Sort
 ```python
+arr= [1,4,5,3,2]
 
+def selection(lis):
+    length = len(arr)
+    for i in range(length):
+        for j in range(1,length-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+    return lis
+
+arr = [1,3,6,2,5]
+print(selection(arr))
 ```
 
 ##
