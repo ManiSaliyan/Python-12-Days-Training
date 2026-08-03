@@ -84,5 +84,78 @@ print("inorder Successive of 3: ",tree.inorder_successor(tree.root))
 
 ## 
 ```python
+class Node:
+    def __init__(self,d):
+        self.left=self.right=None
+        self.data=d
+class Tree:
+    def __init__(self):
+        self.root=None
+    def insert(self,node,data):
+        if node is None:
+            return Node(data)
+        if node.data>data:
+            node.left = self.insert(node.left,data)
+        else:
+            node.right = self.insert(node.right,data)
+        return node
+    
+    def inorder(self,node):
+        if node:
+            self.inorder(node.left)
+            print(node.data,end=" ")
+            self.inorder(node.right)
+    def preorder(self,node):
+        if node:
+            print(node.data,end=" ")
+            self.preorder(node.left)
+            self.preorder(node.right)
+            
+    def postorder(self,node):
+        if node:
+            self.postorder(node.left)
+            self.postorder(node.right)
+            print(node.data,end=" ")
+    def search(self,node,key):
+        if node is None:
+            return False
+        if node.data == key:
+            return True
+        if node.data>key:
+            return self.search(node.left,key)
+        else:
+            return self.search(node.right,key)
+    def height(self,node):
+        if node is None:
+            return 0
+        left = self.height(node.left)
+        right = self.height(node.right)
+        return max(left,right)+1
+    def inorder_successor(self,node):
+        cur = node.right
+        while cur.left:
+            cur=cur.left
+        return cur.data
+tree = Tree()
+root=None
+root=tree.insert(root,8)
+root=tree.insert(root,3)
+root=tree.insert(root,1)
+root=tree.insert(root,6)
+root=tree.insert(root,7)
+root=tree.insert(root,10)
+root=tree.insert(root,14)
+root=tree.insert(root,4)
+print("Inorder: ",tree.inorder(root))
+print("Preorder: ",tree.preorder(root))
+print("Postorder: ",tree.postorder(root))
+print("Key is Present or Not: ",tree.search(root,10))
+print("Height of the tree: ",tree.height(root))
+print("inorder Successor: ",tree.inorder_successor(root))
+```
+
+
+## 
+```python
 
 ```
