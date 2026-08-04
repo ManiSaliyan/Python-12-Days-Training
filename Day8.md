@@ -1,8 +1,8 @@
 ## Tree
-- it is a non linear Data structure
+- it is a non linear Data structure .collection of nodes connected with edges in a hierchial manner
 
 ## graph
-
+- it is a non linear Data structure .collection of vertices connected with edges.
 ```pythpn
 import collections
 def dfs(graph,start,visited=None):
@@ -39,4 +39,21 @@ dfs(graph,0)
 print()
 print("Breadth First Search:")
 bfs(graph,0)
+```
+## Invert Binary Tree
+```python
+
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if root is None:
+            return root
+        root.left,root.right = root.right,root.left
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
 ```
